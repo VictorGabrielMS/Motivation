@@ -4,9 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.27425944841675176" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/colored_cursor.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/colored_edittext_cursor.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/ic_all_inclusive.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/ic_happy.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/ic_sunny.xml" value="0.2055" />
+        <entry key="app/src/main/res/font/cabin_sketch.xml" value="0.38055555555555554" />
+        <entry key="app/src/main/res/font/cambo.xml" value="0.38055555555555554" />
+        <entry key="app/src/main/res/font/poppins.xml" value="0.38055555555555554" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_user.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2055" />
       </map>
     </option>
   </component>

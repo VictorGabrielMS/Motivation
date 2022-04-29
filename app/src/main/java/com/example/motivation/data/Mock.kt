@@ -5,11 +5,11 @@ import com.example.motivation.entity.Phrase
 import kotlin.random.Random
 
 class Mock {
-    private val all = Constants.PHRASECATEGORY.ALL
+    private val all = Constants.PHRASE_CATEGORY.ALL
 
-    private val happy = Constants.PHRASECATEGORY.HAPPY
+    private val happy = Constants.PHRASE_CATEGORY.HAPPY
 
-    private val sunny = Constants.PHRASECATEGORY.SUN
+    private val sunny = Constants.PHRASE_CATEGORY.SUN
 
     private val langEn = Constants.LANGUAGE.ENGLISH
 

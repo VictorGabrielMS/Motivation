@@ -70,12 +70,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleFilter(id: Int) {
+        val ta = this.theme.obtainStyledAttributes(R.styleable.ViewStyle)
+
         iconsIds.forEach {
             findViewById<ImageView>(it).setColorFilter(
-                ContextCompat.getColor(
-                    this,
-                    R.color.dark_purple
-                )
+                ta.getColor(R.styleable.ViewStyle_primaryVariant, android.R.attr.defaultValue)
             )
         }
 

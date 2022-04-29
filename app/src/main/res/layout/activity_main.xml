@@ -4,39 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.MainActivity">
 
     <LinearLayout
         android:id="@+id/box_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple"
-        android:orientation="horizontal"
-        android:paddingHorizontal="8dp"
-        android:paddingVertical="16dp">
+        android:background="?attr/onPrimary"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/image_all"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:contentDescription="@string/ico"
+            android:padding="4dp"
             android:src="@drawable/ic_all_inclusive" />
 
         <ImageView
             android:id="@+id/image_happy"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:contentDescription="@string/ico"
+            android:padding="4dp"
             android:src="@drawable/ic_happy" />
 
         <ImageView
             android:id="@+id/image_sun"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="56dp"
             android:layout_weight="1"
             android:contentDescription="@string/ico"
+            android:padding="4dp"
             android:src="@drawable/ic_sunny" />
 
     </LinearLayout>
@@ -49,46 +51,66 @@
         android:layout_below="@+id/box_header"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/cabin_sketch"
+        android:fontFamily="@font/poppins"
         android:textColor="@color/black"
         android:textSize="16sp" />
 
-
-    <TextView
-        android:id="@+id/text_random_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
         android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/cabin_sketch"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:backgroundTint="?attr/primary"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_random_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="6dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="4dp"
+                android:layout_below="@+id/text_random_message"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:background="@color/black"
+                android:backgroundTint="?attr/primaryVariant"
+                android:elevation="1dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 
-    <View
-        android:layout_width="120dp"
-        android:layout_height="4dp"
-        android:layout_below="@+id/text_random_message"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:background="@color/black"
-        android:backgroundTint="@color/dark_purple"
-        android:elevation="5dp" />
-
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_new_phrase"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/dark_purple"
-        android:fontFamily="@font/cabin_sketch"
-        android:text="@string/new_phrase" />
+        android:backgroundTint="?attr/onPrimary"
+        android:fontFamily="@font/poppins"
+        android:paddingVertical="8dp"
+        android:text="@string/new_phrase"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp" />
+
 </RelativeLayout>

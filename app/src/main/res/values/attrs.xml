@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewStyle">
+        <attr name="primary" format="color" />
+        <attr name="primaryVariant" format="color" />
+        <attr name="onPrimary" format="color" />
+
+        <attr name="secondary" format="color" />
+        <attr name="secondaryVariant" format="color" />
+        <attr name="onSecondary" format="color" />
+    </declare-styleable>
+</resources>

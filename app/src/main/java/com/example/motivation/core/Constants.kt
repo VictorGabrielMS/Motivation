@@ -5,7 +5,7 @@ class Constants private constructor() {
        const val USER_NAME = "USER_NAME"
     }
 
-    object PHRASECATEGORY {
+    object PHRASE_CATEGORY {
         const val ALL = 1
         const val HAPPY = 2
         const val SUN = 3
