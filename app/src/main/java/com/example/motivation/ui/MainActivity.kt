@@ -1,5 +1,6 @@
 package com.example.motivation.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -36,7 +37,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         listeners()
 
         handleRefreshPhrase()
-        handleWelcomeMessage()
         handleFilter(iconsIds[0])
     }
 
@@ -46,10 +46,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.button_new_phrase -> {
                 handleRefreshPhrase()
             }
+            R.id.text_welcome -> {
+                handleNavigate()
+            }
             in iconsIds -> {
                 handleFilter(view.id)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handleWelcomeMessage()
     }
 
     private fun listeners() {
@@ -57,6 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.imageAll.setOnClickListener(this)
         binding.imageHappy.setOnClickListener(this)
         binding.imageSun.setOnClickListener(this)
+        binding.textWelcome.setOnClickListener(this)
     }
 
     private fun handleRefreshPhrase() {
@@ -67,6 +76,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val name = storage.getString(Constants.KEY.USER_NAME)
         val hello = getString(R.string.hello)
         binding.textWelcome.text = "$hello, $name!"
+    }
+
+    private fun handleNavigate() {
+        storage.storeSting(Constants.KEY.USER_NAME, "")
+        startActivity(Intent(this, UserActivity::class.java))
+        finish()
     }
 
     private fun handleFilter(id: Int) {
