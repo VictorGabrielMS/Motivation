@@ -40,6 +40,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         handleFilter(iconsIds[0])
     }
 
+    override fun onResume() {
+        super.onResume()
+        handleWelcomeMessage()
+    }
 
     override fun onClick(view: View) {
         when (view.id) {
@@ -55,11 +59,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        handleWelcomeMessage()
-    }
-
     private fun listeners() {
         binding.buttonNewPhrase.setOnClickListener(this)
         binding.imageAll.setOnClickListener(this)
@@ -69,7 +68,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleRefreshPhrase() {
-        binding.textRandomMessage.text = Mock().getPhrase(filter, Locale.getDefault().language)
+        binding.textRandomMessage.text = mock.getPhrase(filter, Locale.getDefault().language)
     }
 
     private fun handleWelcomeMessage() {
@@ -85,11 +84,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleFilter(id: Int) {
-        val ta = this.theme.obtainStyledAttributes(R.styleable.ViewStyle)
+        val themeTypedArr = this.theme.obtainStyledAttributes(R.styleable.ViewStyle)
 
         iconsIds.forEach {
             findViewById<ImageView>(it).setColorFilter(
-                ta.getColor(R.styleable.ViewStyle_primaryVariant, android.R.attr.defaultValue)
+                themeTypedArr.getColor(R.styleable.ViewStyle_primaryVariant, android.R.attr.defaultValue)
             )
         }
 
