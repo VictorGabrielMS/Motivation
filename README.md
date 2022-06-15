@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-   <a href="https://github.com/VictorGabrielMS">
+   <a href="https://github.com/msvictor">
     <img alt="Code by Victor Gabriel" src="https://img.shields.io/badge/code%20by-Victor Gabriel-%23E02041">
   </a>
 </p>
@@ -69,7 +69,7 @@ The project was developed with the technologies below:
 1. Clone :
 
 ```sh
-  $ git clone https://github.com/VictorGabrielMS/motivation.git
+  $ git clone https://github.com/msvictor/motivation.git
 ```
 
 2. Then open the folder on Android Studio and execute
